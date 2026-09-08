@@ -740,3 +740,277 @@ nav a.active { color: #fff; font-weight: 700; }
   border-radius: 4px;
   cursor: pointer;
 }
+/* ===== 문의하기 원본 디자인 전용 스타일 ===== */
+.contact-page-container {
+  min-height: calc(100vh - 60px);
+  background-color: #f8fafc;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-wrapper {
+  width: 100%;
+  max-width: 640px;
+}
+
+.contact-header {
+  margin-bottom: 32px;
+}
+
+.contact-badge {
+  display: inline-block;
+  background-color: #f1f5f9;
+  color: #6366f1;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.contact-desc {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* 3단계 카드 */
+.step-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.step-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  background-color: #6366f1;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 2px 0;
+}
+
+.step-content p {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* 폼 카드 */
+.contact-form-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+/* ===== 상세페이지 위원나라 스타일 추가분 (2026-09) ===== */
+
+/* D-day 히어로 박스 (사이드바 상단) */
+.dday-hero-box{
+  border-radius:14px; padding:20px; text-align:center; margin-bottom:14px;
+}
+.dday-hero-box.urgent{background:var(--urgent-tint);}
+.dday-hero-box.soon{background:var(--soon-tint);}
+.dday-hero-box.calm{background:var(--calm-tint);}
+.dday-hero-date{font-size:12.5px; color:var(--ink-soft); font-weight:600; margin-bottom:6px;}
+.dday-hero-num{font-size:40px; font-weight:800; line-height:1;}
+.dday-hero-box.urgent .dday-hero-num{color:var(--urgent);}
+.dday-hero-box.soon .dday-hero-num{color:var(--soon);}
+.dday-hero-box.calm .dday-hero-num{color:var(--calm);}
+
+/* 스탯 박스 (세대수/전용면적/당첨자발표 등) */
+.stat-box-row{display:flex; gap:8px; margin-bottom:8px;}
+.stat-box{
+  flex:1; background:var(--surface); border:1px solid var(--line); border-radius:10px;
+  padding:12px 14px; text-align:center;
+}
+.stat-box.wide{flex:1;}
+.stat-box .label{font-size:12px; color:var(--ink-faint); margin-bottom:4px;}
+.stat-box .value{font-size:14.5px; font-weight:700; color:var(--ink);}
+
+/* 미니 캘린더 (사이드바) */
+.mini-calendar{
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:16px; margin-bottom:14px;
+}
+.mini-calendar-title{font-size:13.5px; font-weight:700; margin-bottom:10px; text-align:center;}
+.mini-calendar-grid{display:grid; grid-template-columns:repeat(7,1fr); gap:3px;}
+.mini-calendar-weekday{text-align:center; font-size:10.5px; color:var(--ink-faint); font-weight:700; padding-bottom:3px;}
+.mini-calendar-cell{
+  aspect-ratio:1; display:flex; align-items:center; justify-content:center;
+  font-size:11px; color:var(--ink-soft); border-radius:6px;
+}
+.mini-calendar-cell.apply{background:var(--brand-tint); color:var(--brand-2); font-weight:700;}
+.mini-calendar-cell.winner{background:var(--urgent-tint); color:var(--urgent); font-weight:700;}
+.mini-calendar-legend{display:flex; gap:14px; justify-content:center; margin-top:10px; font-size:11px; color:var(--ink-soft);}
+.mini-calendar-legend .dot{display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:4px; vertical-align:middle;}
+.mini-calendar-legend .dot.apply{background:var(--brand-2);}
+.mini-calendar-legend .dot.winner{background:var(--urgent);}
+/* ===== 1. 버튼 & 행동(CTA) 스타일 정돈 ===== */
+/* 메인 강조 버튼 (원문 공고 보기) */
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 0;
+  background: #111827; /* 레퍼런스 스타일 짙은 검은색 */
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+.primary-btn:hover {
+  background: #1f2937;
+}
+
+/* 서브 버튼 (목록으로) */
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 0;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  text-decoration: none;
+  margin-bottom: 14px;
+}
+.secondary-btn:hover {
+  background: var(--line-light, #f8f9fa);
+}
+
+/* 액션 버튼 그룹 (관심등록 / 공유) */
+.action-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.action-btn {
+  flex: 1;
+  padding: 9px 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px; /* 레퍼런스 스타일 알약 형태 */
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.action-btn.active {
+  background: #fff4e6;
+  border-color: #ffd8a8;
+  color: #d9480f;
+}
+
+/* ===== 2. 본문 카드 & 섹션 타이틀 가독성 강화 ===== */
+.info-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+/* 레퍼런스 핵심: 섹션 제목 세로바(|) 포인트 */
+.info-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  border-left: 3.5px solid var(--ink); /* 좌측 검은색 세로 바 */
+  padding-left: 10px;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+/* 기본 정보 테이블형(Row) 간격 정돈 */
+.info-card .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.info-card .info-row:last-child {
+  border-bottom: none;
+}
+.info-card .info-row span:first-child {
+  font-size: 13.5px;
+  color: var(--ink-faint);
+  font-weight: 500;
+}
+.info-card .info-row span:last-child {
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ===== 3. 경고 박스 (Warning Box) 스타일 ===== */
+.warning-box {
+  background: #fff5f5;
+  border: 1px solid #ffe3e3;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #c92a2a;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* ===== 4. 첨부파일 UI 개선 ===== */
+.file-list a {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background: #f8f9fa;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+.file-list a:hover {
+  border-color: var(--ink-faint);
+}
